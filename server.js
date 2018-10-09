@@ -19,8 +19,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/listings');
+var usersRouter = require('./routes/locations');
 
 var app = express();
 
@@ -34,6 +34,11 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/client/build/index.html`)
   })
 
+  const usersController = require('./routes/usersController')
+  const ideasController = require('./routes/ideasController')
+  
+  app.use('/api/users', listingsController)
+  app.use('/api/users/:userId/ideas', locationsController)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
