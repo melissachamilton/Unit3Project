@@ -10,32 +10,44 @@ const { Locations, Listings } = require('./model')
 
 const HomeAway = new Listings ({
     URL: 'sample@homeaway.com',
-    promotions: '7th night free',
+    ListDate: '9/1/18',
+    Rate: '$70',
+    Promotions: '7th night free',
   })
 
 const AirBNB = new Listings ({
     URL: 'sample@airbnb.com',
-    promotions: '50% discount for 1 month stays.',
+    ListDate: '9/8/18',
+    Rate: '$80',
+    Promotions: '50% discount for 1 month stays.',
 })
 
 const ExecutiveStays = new Listings ({
     URL: 'sample@executives.com',
-    promotions: '50% discount for 1 month stays.',
+    ListDate: '9/15/18',
+    Rate: '$90',
+    Promotions: '50% discount for 1 month stays.',
 })
 
 const Downtown = new Locations ({
   Address: '123 Peachtree Street Atlanta, GA 30303',
   Beds: "2",
+  Baths: "1",
+  Description: "Beautiful bungalow home near Mercedez Benz Stadium.",
   Listing: [HomeAway]
 })
 const Smyrna = new Locations ({
   Address: '456 King Street Smyrna, GA 30080',
   Beds: "3",
+  Baths: "2",
+  Description: "Charming condo near Suntrust Park.",
   Listing: [AirBNB]
 })
 const Buckhead = new Locations ({
     Address: '678 Lenox Dr, Atlanta GA 30319',
     Beds: "1",
+    Baths: "1",
+    Description: "Luxury studio suite near Lenox Mall.",
     Listing: [ExecutiveStays]
 })
 
