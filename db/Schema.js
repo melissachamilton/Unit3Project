@@ -3,7 +3,7 @@ const Schema = require('mongoose').Schema
 const ListingsSchema = new Schema({
   website: {
     type: String
-  }
+  },
   url: {
     type: String,
     default: 'HomeAway@homeaway.com'

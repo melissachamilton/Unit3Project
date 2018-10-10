@@ -34,6 +34,7 @@ export default class SingleLocal extends Component {
 
     return (
       <div>
+        
         <h1>Single Local</h1>
         <div>Address: {singleSite.address}</div>
         <div>Baths: {singleSite.baths}</div> 

@@ -7,33 +7,33 @@ export default class Locations extends Component {
         locals: []
     }
     
-    
     componentDidMount = async () => {
         const response = await axios.get('/api/locations')
         this.setState({ locals: response.data })
       }
     
-      handleChange = (event) => {
-        const newlocal = { ...this.state.newlocal }
-        newlocal[event.target.address] = event.target.value
-        this.setState({ newlocal })
-      }
+      // handleChange = (event) => {
+      //   const newlocal = { ...this.state.newlocal }
+      //   newlocal[event.target.address] = event.target.value
+      //   this.setState({ newlocal })
+      // }
     
-      handleSubmit = async (event) => {
-        event.preventDefault()
-        const response = await axios.post('/api/locations', this.state.newlocal)
+      // handleSubmit = async (event) => {
+      //   event.preventDefault()
+      //   const response = await axios.post('/api/locations', this.state.newlocal)
     
-        const locals = [...this.state.locals]
-        locals.push(response.data)
-        this.setState({ locals })
-      }
+      //   const locals = [...this.state.locals]
+      //   locals.push(response.data)
+      //   this.setState({ locals })
+      // }
     
       render() {
         const localsList = this.state.locals.map((local, i) => {
           return (
+
             <div>
                 <Link to={`/locations/${local._id}`} key={i}>
-                Address: {local.address}
+                address: {local.address}
                 </Link>
             </div>
           )
@@ -42,7 +42,8 @@ export default class Locations extends Component {
         return (
           <div>
             <h1>Locations</h1>
-            {localsList}
+  
+           {localsList}
             <form onSubmit={this.handleSubmit}>
               <input
                 type='text'
