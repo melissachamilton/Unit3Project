@@ -1,30 +1,33 @@
 const Schema = require('mongoose').Schema
 
 const ListingsSchema = new Schema({
-  URL: {
+  website: {
+    type: String
+  }
+  url: {
     type: String,
     default: 'HomeAway@homeaway.com'
   },
-  ListDate: {
+  listDate: {
     type: String,
     default: '9/1/2018'
   },
-  Rate: {
+  rate: {
     type: String,
     default: '$70'
   },
-  Promotions: {
+  promotions: {
     type: String,
     default: 'Stay for a 6 nights and the 7th night is free.'
   }
 })
 
 const LocationsSchema = new Schema({
-  Address: String,
-  Beds: String,
-  Baths: String,
-  Description: String,
-  Listing: [ListingsSchema],
+  address: String,
+  beds: String,
+  baths: String,
+  description: String,
+  listings: [ListingsSchema],
 })
 
 module.exports = {
