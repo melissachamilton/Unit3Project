@@ -15,8 +15,8 @@ router.get('/:id', async (req, res) => {
 
 // Create
 router.post('/', async (req, res) => {
-  const locals = await Locations.create(req.body)
-  res.send(locals)
+  const local = await Locations.create(req.body)
+  res.send(local)
 })
 
 // Update

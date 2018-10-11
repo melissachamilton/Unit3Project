@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import axios from 'axios'
 export default class LocationsForm extends Component {
   state = {
     newLocal: {
@@ -18,8 +18,14 @@ export default class LocationsForm extends Component {
     this.setState({ newLocal })
   }
 
-  addLocal = (event) => {
+  addLocal = async (event) => {
     event.preventDefault()
+    // const response = await axios.post(`/api/locations`, this.state.newLocal)
+    axios.post(`/api/locations`, this.state.newLocal)
+      .then( response => {
+        console.log(response.data)
+      })
+    
     this.props.history.push('/locations')
   }
 
