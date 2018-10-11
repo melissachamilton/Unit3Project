@@ -30,6 +30,24 @@ export default class SingleLocal extends Component {
     this.props.history.push('/locations')
   }
 
+  handleChange = (event) => {
+    console.log('This is working')
+    const editDesc = { ...this.state.singleSite}
+    editDesc[event.target.name] = event.target.value
+    this.setState({ singleSite: editDesc })
+  }
+
+  addLocal = async (event) => {
+    console.log('Bluring is working')  
+    // event.preventDefault()
+      // // const response = await axios.post(`/api/locations`, this.state.newLocal)
+      // axios.post(`/api/locations`, this.state.newLocal)
+      //   .then( response => {
+      //     console.log(response.data)
+      //   })
+      
+      // this.props.history.push('/locations')
+    }
 
 
   render() {
@@ -38,7 +56,7 @@ export default class SingleLocal extends Component {
       return (
         < div key={i}>
 
-       <Link to={`/locations/newlisting`} >
+       <Link to={`/locations/listings`} >
                 Listings: {listing.url}
                 </Link>
         </div >
@@ -54,7 +72,7 @@ export default class SingleLocal extends Component {
         <div>Address: {singleSite.address}</div>
         <div>Baths: {singleSite.baths}</div>
         <div>Beds: {singleSite.beds}</div>
-        <div> Description: {singleSite.description} <button>Update</button></div>
+        <div>Description:<input name="description" type="text" placeholder = {singleSite.description} onChange={this.handleChange} onBlur ={this.addLocal}/></div>
         <div>{listingsArray}</div>
         <button onClick={this.handleDelete}> Delete</button>
 
