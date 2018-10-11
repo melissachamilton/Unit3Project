@@ -50,16 +50,8 @@ export default class Locations extends Component {
             <h1>Locations</h1>
   
            {localsList}
-            <form onSubmit={this.handleSubmit}>
-           <div><input
-            address = 'address'
-                beds='text'
-                baths='text'
-                value={this.state.newLocal.address}
-                onChange={this.handleChange} />
-              <input type='submit' value='Create New Location' />
-              </div>
-            </form>
+
+           <button><Link to={`locations/newform`}>Add New Location</Link></button>
           </div>
         )
       }
