@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom'
 
 export default class Locations extends Component {
     state = {
-        locals: []
+        locals: [],
+        newLocal: {
+          address: '',
+          beds: '',
+          baths: '',
+          description: ''
+        }
     }
     
     componentDidMount = async () => {
@@ -12,20 +18,20 @@ export default class Locations extends Component {
         this.setState({ locals: response.data })
       }
     
-      // handleChange = (event) => {
-      //   const newlocal = { ...this.state.newlocal }
-      //   newlocal[event.target.address] = event.target.value
-      //   this.setState({ newlocal })
-      // }
+      handleChange = (event) => {
+        const newLocal = { ...this.state.newLocal }
+        newLocal[event.target.address] = event.target.value
+        this.setState({ newLocal })
+      }
     
-      // handleSubmit = async (event) => {
-      //   event.preventDefault()
-      //   const response = await axios.post('/api/locations', this.state.newlocal)
+      handleSubmit = async (event) => {
+        event.preventDefault()
+        const response = await axios.post('/api/locations', this.state.newLocal)
     
-      //   const locals = [...this.state.locals]
-      //   locals.push(response.data)
-      //   this.setState({ locals })
-      // }
+        const locals = [...this.state.locals]
+        locals.push(response.data)
+        this.setState({ locals })
+      }
     
       render() {
         const localsList = this.state.locals.map((local, i) => {
@@ -45,12 +51,14 @@ export default class Locations extends Component {
   
            {localsList}
             <form onSubmit={this.handleSubmit}>
-              <input
-                type='text'
-                name='userName'
-                value={this.state.newlocal}
+           <div><input
+            address = 'address'
+                beds='text'
+                baths='text'
+                value={this.state.newLocal.address}
                 onChange={this.handleChange} />
               <input type='submit' value='Create New Location' />
+              </div>
             </form>
           </div>
         )
