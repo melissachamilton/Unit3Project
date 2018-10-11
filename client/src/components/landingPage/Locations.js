@@ -9,7 +9,8 @@ export default class Locations extends Component {
           address: '',
           beds: '',
           baths: '',
-          description: ''
+          description: '',
+          listings: ''
         }
     }
     
