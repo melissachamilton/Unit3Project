@@ -37,16 +37,13 @@ export default class SingleLocal extends Component {
     const listingsArray = this.state.listings.map((listing, i) => {
       return (
         < div key={i}>
-        { listing.url }
+
+       <Link to={`/locations/newlisting`} >
+                Listings: {listing.url}
+                </Link>
         </div >
       )
       })
-
-
-
-
-
-
 
 
     return (
@@ -58,7 +55,7 @@ export default class SingleLocal extends Component {
         <div>Baths: {singleSite.baths}</div>
         <div>Beds: {singleSite.beds}</div>
         <div> Description: {singleSite.description} <button>Update</button></div>
-        <div>Listings: {listingsArray}</div>
+        <div>{listingsArray}</div>
         <button onClick={this.handleDelete}> Delete</button>
 
 
