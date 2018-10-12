@@ -21,8 +21,8 @@ router.post('/', async (req, res) => {
 
 // Update
 router.put('/:id', async (req, res) => {
-  const locals = await Locations.findByIdAndUpdate(req.params.id, req.body, { new: true })
-  res.send(locals)
+  const saveUpdatedDesc = await SingleLocal.findByIdAndUpdate(req.params.id, req.body, { new: true })
+  res.send(saveUpdatedDesc)
 })
 
 // Delete
