@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const StyledHomesContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 70vw;
+  width: 40vw;
   padding: 10px;
   flex-wrap: wrap;
   `

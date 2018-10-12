@@ -23,6 +23,7 @@ const ListingsSchema = new Schema({
 })
 
 const LocationsSchema = new Schema({
+  img: String,
   address: String,
   beds: String,
   baths: String,

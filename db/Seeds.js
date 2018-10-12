@@ -1,6 +1,7 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 
+
 mongoose.connect(process.env.MONGODB_URI)
 
 const { Locations, Listings } = require('./model')
@@ -27,6 +28,8 @@ const ExecutiveStays = new Listings({
 })
 
 const Downtown = new Locations({
+  img:
+  src="/images/Downtown-Bungalow.jpg",
   address: '123 Peachtree Street Atlanta, GA 30303',
   beds: "2",
   baths: '1',
@@ -34,6 +37,8 @@ const Downtown = new Locations({
   listings: [HomeAway]
 })
 const Smyrna = new Locations({
+  img:
+  "/images/Smyrna-Haven.jpg",
   address: '456 King Street Smyrna, GA 30080',
   beds: "3",
   baths: '2',
@@ -41,6 +46,7 @@ const Smyrna = new Locations({
   listings: [AirBNB]
 })
 const Buckhead = new Locations({
+  img: "/images/Buckhead-Condo.jpg",
   address: '678 Lenox Dr, Atlanta GA 30319',
   beds: "1",
   baths: '1',
