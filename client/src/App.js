@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Locations from './components/landingPage/Locations';
-import SingleLocal from './components/oneLocation/SingleLocal';
-import LocationsForm from './components/landingPage/LocationsForm';
+import Locations from './components/Locations';
+import SingleLocal from './components/SingleLocal';
+import LocationsForm from './components/LocationsForm';
 
 class App extends Component {
   render() {

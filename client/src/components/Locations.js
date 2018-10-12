@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { StyledHomesContainer } from './SharedComponents'
+
 
 export default class Locations extends Component {
     state = {
@@ -49,9 +51,8 @@ export default class Locations extends Component {
         return (
           <div>
             <h1>Locations</h1>
-  
-           {localsList}
-
+  <StyledHomesContainer>{localsList}</StyledHomesContainer>
+           
            <button><Link to={`locations/newform`}>Add New Location</Link></button>
           </div>
         )
