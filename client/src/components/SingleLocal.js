@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Route, Redirect } from 'react-router'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
+const DescBox = styled.div`
+  width: 400px;
+  align-items: center;
+  text-decoration-color: red;
+`
 export default class SingleLocal extends Component {
   state = {
     singleSite: {},
@@ -73,7 +79,9 @@ export default class SingleLocal extends Component {
         <div>Address: {singleSite.address}</div>
         <div>Baths: {singleSite.baths}</div>
         <div>Beds: {singleSite.beds}</div>
-        <div>Description:<input name="description" type="text" placeholder = {singleSite.description} onChange={this.handleChange} onBlur ={this.saveUpdatedDesc}/></div>
+      
+       <div>Description:<input name="description" type="text" placeholder = {singleSite.description} onChange={this.handleChange} onBlur ={this.saveUpdatedDesc}/></div>
+      
         <div>{listingsArray}</div>
         <button onClick={this.handleDelete}> Delete</button>
 

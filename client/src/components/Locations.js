@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { StyledHomesContainer } from './SharedComponents'
+import { StyledHomesContainer, StyledImage } from './SharedComponents'
 
 
 export default class Locations extends Component {
@@ -39,21 +39,23 @@ export default class Locations extends Component {
   render() {
     const localsList = this.state.locals.map((local, i) => {
       return (
+        <StyledHomesContainer>
+          <div>
+            <Link to={`/locations/${local._id}`} key={i}>
+            <StyledImage src={local.img} alt="an image of a thing"></StyledImage>
+            <div>{local.address}</div>
+            
+            </Link>
 
-        <div>
-          <Link to={`/locations/${local._id}`} key={i}>
-            address: {local.address}
-          </Link>
-          <img width='200' src={local.img} alt="an image of a thing" />
-          <div>imsge source {local.img}</div>
-        </div>
+          </div>
+        </StyledHomesContainer>
       )
     })
 
     return (
       <div>
         <h1>Locations</h1>
-        <StyledHomesContainer>{localsList}</StyledHomesContainer>
+        <div><StyledHomesContainer>{localsList}</StyledHomesContainer></div>
 
         <button><Link to={`locations/newform`}>Add New Location</Link></button>
       </div>

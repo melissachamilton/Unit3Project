@@ -46,7 +46,7 @@ const Smyrna = new Locations({
   listings: [AirBNB]
 })
 const Buckhead = new Locations({
-  img: "/images/Buckhead-Condo.jpg",
+  img: "/images/Buckhead-View.jpg",
   address: '678 Lenox Dr, Atlanta GA 30319',
   beds: "1",
   baths: '1',

@@ -4,11 +4,15 @@ import styled from 'styled-components'
 
 export const StyledHomesContainer = styled.div`
   display: flex;
+  text-align: center;
   justify-content: space-evenly;
-  width: 40vw;
+  flex-direction: column;
   padding: 10px;
-  flex-wrap: wrap;
   `
+
+export const StyledImage = styled.img`
+  width:200px;
+`
 
 const sizes = {
   giant: 1170,
