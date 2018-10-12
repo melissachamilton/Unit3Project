@@ -44,7 +44,8 @@ export default class Locations extends Component {
           <Link to={`/locations/${local._id}`} key={i}>
             address: {local.address}
           </Link>
-          <img src={local.img} alt="an image of a thing" />
+          <img width='200' src={local.img} alt="an image of a thing" />
+          <div>imsge source {local.img}</div>
         </div>
       )
     })
