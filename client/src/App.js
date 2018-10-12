@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Locations from './components/Locations';
 import SingleLocal from './components/SingleLocal';
 import LocationsForm from './components/LocationsForm';
+import Listings from './components/Listings';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route exact path='/'component={Locations} />
           <Route exact path='/locations'component={Locations} />
           <Route exact path = '/locations/newform'component={LocationsForm}/>
+          <Route exact path = '/locations/Listings'component={Listings} />,
           <Route exact path='/locations/:localId'render={singleLocalComponent} />
         </Switch>
       </Router>

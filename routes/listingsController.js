@@ -1,6 +1,18 @@
 const router = require('express').Router({ mergeParams: true })
 const { Locations, Listings } = require('../db/model')
 
+// Show All
+router.get('/listings', async (req, res) => {
+  const listings = await listings.find()
+  res.send(listings)
+})
+
+// Show One
+router.get('/:id', async (req, res) => {
+  const locals = await Locations.findById(req.params.id)
+  res.send(locals)
+})
+
 router.post('/', (req, res) => {
   const newListing = new Listing ()
   Locations.findById(req.params.locationId)
