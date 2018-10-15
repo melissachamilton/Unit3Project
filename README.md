@@ -6,8 +6,17 @@ Heroku,React, Node.js, Express, MongoDB, and  Mongoose.
 
 <h1>Planning</h1>
 Trello
-Wireframes
+<img src= /images/wireframe.jpg />
+
+<img src= /images/Travel Host ERD.jpg>
+
 ERDs
+
+<h1>My Links</h1>
+https://trello.com/b/ONkbKbxi/travel-host-application
+
+https://hostess-with-the-mostess.herokuapp.com/
+
 
 <h1>About this Project</h1>
 This is a website designed for users that list homes on rental sites such Air BnB. 
