@@ -7,9 +7,9 @@ Heroku,React, Node.js, Express, MongoDB, and  Mongoose.
 <h1>Planning</h1>
 Trello
 
-![Wireframe](.client/public/images/Wireframe.jpg)
+![Wireframe](./client/public/images/Wireframe.jpg)
 
-![ERD](.client/public/images/TravelHostERD.jpg)
+![ERD](./client/public/images/TravelHostERD.jpg)
 
 
 <h1>My Links</h1>
