@@ -9,7 +9,7 @@ Trello
 
 ![Wireframe](./public/images/Wireframe.jpg)
 
-![ERD](./public/images/Travel Host ERD.jpg)
+![ERD](./public/images/TravelHostERD.jpg)
 
 
 <h1>My Links</h1>
