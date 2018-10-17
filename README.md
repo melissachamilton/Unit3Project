@@ -6,11 +6,11 @@ Heroku,React, Node.js, Express, MongoDB, and  Mongoose.
 
 <h1>Planning</h1>
 Trello
-<img src= /images/wireframe.jpg />
 
-<img src= /images/Travel Host ERD.jpg>
+![Wireframe](./public/images/Wireframe.jpg)
 
-ERDs
+![ERD](./public/images/Travel Host ERD.jpg)
+
 
 <h1>My Links</h1>
 https://trello.com/b/ONkbKbxi/travel-host-application
